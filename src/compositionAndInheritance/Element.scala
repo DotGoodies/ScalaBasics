@@ -10,6 +10,8 @@ object Element{
 
   def blank(width : Int, height : Int) : Element = new UniformElement(' ', width, height)
 
+  def box(ch: Char, size: Int): Element = new UniformElement(ch, size, size)
+
   private class ArrayElement(val contents : Array[String]) extends Element
 
   private class LineElement
