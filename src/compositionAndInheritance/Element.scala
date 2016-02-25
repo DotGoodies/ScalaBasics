@@ -60,7 +60,9 @@ abstract class Element {
       val top = blank(width, (h - height) / 2)
       val bottom = blank(width, h - height - top.height)
 
-      top above this above bottom
+      top above
+        this above
+        bottom
     }
 
   def above(other: Element) = {
