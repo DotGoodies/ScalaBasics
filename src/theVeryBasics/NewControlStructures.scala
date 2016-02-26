@@ -28,7 +28,7 @@ object NewControlStructures {
       }
     }
 
-    withPrintWriter(new File("/tmp/" + UUID.randomUUID()))    {
+    withPrintWriter(new File("/tmp/" + UUID.randomUUID())){
       writer => writer.println(new Date())
     }
   }

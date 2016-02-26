@@ -14,8 +14,8 @@ object Spiral {
       corner
     else{
       val sp = spiral(nEdges - 1, (direction + 3) % 4)
-      def verticalBar = elem('|', 1, sp.height)
-      def horizontalBar = elem('-', sp.width, 1)
+      val verticalBar = elem('|', 1, sp.height)
+      val horizontalBar = elem('-', sp.width, 1)
 
       if(direction == 0)
         (corner beside horizontalBar) above (sp beside space)
