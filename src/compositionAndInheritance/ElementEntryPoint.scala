@@ -23,4 +23,6 @@ object ElementEntryPoint extends App {
     (box2 beside box1)
 
   println(form)
+
+  println(Spiral.spiral(17, 0))
 }
