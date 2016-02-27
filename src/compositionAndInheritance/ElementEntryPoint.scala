@@ -4,7 +4,7 @@ package compositionAndInheritance
   * Created by igor on 22-2-16.
   */
 
-import Element._
+import console.layout.Element._
 
 object ElementEntryPoint extends App {
   val x1 = array("Hello", "z") above

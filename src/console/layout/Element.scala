@@ -1,4 +1,4 @@
-package compositionAndInheritance
+package console.layout
 
 object Element{
   def elem(contents : Array[String]) : Element = new ArrayElement(contents)

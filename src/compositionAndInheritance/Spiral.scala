@@ -1,6 +1,7 @@
 package compositionAndInheritance
 
-import Element.elem
+import console.layout.Element
+import console.layout.Element.elem
 
 /**
   * Created by igor on 26-2-16.
