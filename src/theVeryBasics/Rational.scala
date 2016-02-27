@@ -1,7 +1,9 @@
+package theVeryBasics
+
 /**
   * Created by igor on 20-2-16.
   */
-class Rational(n : Int, d : Int){
+class Rational(n : Int, d : Int) extends Ordered[Rational]{
   require(d != 0)
 
   private val g = findGreatestCommonDivisor(n.abs, d.abs)
@@ -15,6 +17,9 @@ class Rational(n : Int, d : Int){
       numerator + "/" + denominator
     else
       numerator.toString
+
+  override def compare(that: Rational): Int =
+    (numerator * that.denominator) - (that.numerator * denominator)
 
   def + (other : Rational) = new Rational(
     numerator * other.denominator + other.numerator * denominator,
@@ -36,9 +41,7 @@ class Rational(n : Int, d : Int){
 
   def / (i : Int) = new Rational(numerator, denominator * i)
 
-  def lessThen(other : Rational) = numerator * other.denominator < other.numerator * denominator
-
-  def max(other : Rational) = if(lessThen(other)) other else this
+  def max(other : Rational) = if(this < other) other else this
 
   private def findGreatestCommonDivisor(a : Int, b : Int) : Int =
     if(b == 0) a else findGreatestCommonDivisor(b, a % b)

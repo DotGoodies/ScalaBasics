@@ -32,4 +32,6 @@ object ElementEntryPoint extends App {
   println(box3 above box4)
   println("==========")
   println(box3 beside box4)
+
+  println(Spiral.spiral(17, 0))
 }

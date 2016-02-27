@@ -8,8 +8,14 @@ object Exceptions {
       if(n % 2 == 0)
         n / 2
       else
-        throw new RuntimeException("n must be even")
+        error("n must be even")
 
     println(half)
+
+
+
   }
+
+  def error(message : String) : Nothing =
+    throw new RuntimeException(message)
 }
