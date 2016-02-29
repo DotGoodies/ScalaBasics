@@ -18,9 +18,9 @@ object Element{
   (
     val value: String
   ) extends Element{
-    val contents = Array(value)
-    override val width = contents.length
-    override val height = 1
+    def contents = Array(value)
+    override val width = value.length
+    override def height = 1
   }
 
   private class UniformElement

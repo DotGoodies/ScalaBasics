@@ -6,15 +6,14 @@ import console.layout.Element.elem
 /**
   * Created by igor on 28-2-16.
   */
-object ExpressionFormatter {
+class ExpressionFormatter {
   private val operationGroups =
     Array(
       Set("+", "-"),
-      Set("*", "/")
+      Set("*")
     )
 
-  private val precedence =
-  {
+  private val precedence =  {
     for {
       i <- operationGroups.indices
       op <- operationGroups(i)
@@ -35,8 +34,10 @@ object ExpressionFormatter {
       else st
     }
 
-    case UnOp(op, arg) =>
+    case x @ UnOp(op, arg) => {
+      println(x.z)
       elem(op) beside format(arg, unaryPrecedence)
+    }
 
     case BinOp("/", left, right) =>
       val top = format(left, fractionPrecedence)
