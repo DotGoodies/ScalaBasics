@@ -35,7 +35,7 @@ class NonEmptySet(elem : Int, left: IntSet, right: IntSet) extends IntSet{
   def intersect(other : IntSet) : IntSet = {
     val l = left.intersect(other)
     val r = right.intersect(other)
-    val s = l.union(r)
+    val s = l union r
 
     if(other.contains(elem)) s.incl(elem) else s
   }
@@ -61,5 +61,5 @@ object EmptySet extends IntSet{
 
   def isEmpty = true
 
-  def toList = List()
+  def toList = List[Int]()
 }
